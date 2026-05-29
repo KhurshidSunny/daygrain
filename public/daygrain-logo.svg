@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" fill="none">
+  <rect width="1200" height="360" rx="28" fill="#070B14"/>
+  <defs>
+    <linearGradient id="g1" x1="90" y1="62" x2="300" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+  <rect x="72" y="72" width="192" height="192" rx="44" fill="url(#g1)"/>
+  <circle cx="168" cy="168" r="38" fill="#070B14"/>
+  <circle cx="130" cy="143" r="17" fill="#070B14" opacity="0.55"/>
+  <circle cx="208" cy="193" r="13" fill="#070B14" opacity="0.45"/>
+  <circle cx="193" cy="126" r="10" fill="#070B14" opacity="0.4"/>
+  <text x="308" y="175" fill="#ECF1FF" font-family="Inter, Arial, sans-serif" font-size="106" font-weight="700" letter-spacing="-1.8">Daygrain</text>
+  <text x="312" y="224" fill="#9AA8CA" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">Minimal tools for modern minds.</text>
+</svg>
