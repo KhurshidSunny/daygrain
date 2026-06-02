@@ -135,5 +135,14 @@ const toolBaseUrl = process.env.NEXT_PUBLIC_TOOL_BASE_URL ?? siteConfig.domain
 
 export function getToolAppUrl(tool: ToolItem): string | null {
   if (tool.status !== "Live" || !tool.appPath) return null
-  return `${toolBaseUrl.replace(/\/$/, "")}${tool.appPath}`
+  const normalizedPath = tool.appPath.trim()
+  const normalizedBase = toolBaseUrl.replace(/\/$/, "")
+  const normalizedDomain = siteConfig.domain.replace(/\/$/, "")
+
+  // Use same-origin relative links by default to avoid host-level redirect loops.
+  if (normalizedBase === normalizedDomain) {
+    return normalizedPath
+  }
+
+  return `${normalizedBase}${normalizedPath}`
 }

@@ -4,6 +4,12 @@
 # Proxy Focus app under the main domain path.
 # If your focus site URL differs, update the target host accordingly.
 [[redirects]]
+  from = "/focus"
+  to = "/focus/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/focus/*"
   to = "https://daygrain-focus.netlify.app/focus/:splat"
   status = 200
