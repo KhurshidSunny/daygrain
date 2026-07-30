@@ -1,43 +1,56 @@
-# Daygrain Hub
+# Daygrain
 
-Official marketing and discovery hub for Daygrain tools.
+One task. One timer. Done.
 
 ## Overview
 
-Daygrain Hub is a production Next.js application that presents the Daygrain brand, showcases available tools, and routes users to each product experience.
+Daygrain is a lightweight web app for deep work sessions. It is optimized for speed, clarity, and distraction-free use on desktop and mobile browsers.
+
+## Core Features
+
+- Single-task workflow
+- 12 / 25 / 45 minute focus sessions
+- Fullscreen focus mode
+- Pause and resume controls
+- Optional short break flow
+- Privacy and legal pages
+- SEO metadata and structured content support
 
 ## Tech Stack
 
-- Next.js 16 (App Router)
+- Vite
 - React 19
 - TypeScript
 - Tailwind CSS 4
+- React Router
+- react-helmet-async
 
 ## Scripts
 
 ```bash
 npm run dev
 npm run build
-npm run start
+npm run preview
 npm run lint
 ```
 
 ## Project Structure
 
-- `src/app` - routes, layout, metadata, and global styles
-- `src/components` - reusable UI components
-- `src/lib` - site configuration, SEO utilities, shared constants
-- `public` - static assets (logos, icons, media)
+- `src/components` - UI and layout components
+- `src/pages` - route-level pages
+- `src/data` - SEO and content metadata
+- `src/brand` - brand tokens and theme values
+- `public` - static assets (favicon, manifest, robots, sitemap)
 
-## Deployment
+## Build and Deployment
 
-Production builds are generated with:
+Create a production build with:
 
 ```bash
 npm run build
 ```
 
-This project is configured for static assets and app hosting on modern platforms such as Netlify.
+Deploy the generated `dist` directory to your hosting platform.
 
 ## License
 
