@@ -7,8 +7,10 @@
     "dev:hub": "next dev --webpack",
     "dev:turbo": "next dev",
     "dev:focus": "npm --prefix tools/focus run dev",
+    "dev:decide": "npm --prefix tools/decide run dev",
     "build:focus": "node tools/focus/clean-install.mjs && npm --prefix tools/focus run build",
-    "build": "npm run build:focus && next build",
+    "build:decide": "node tools/decide/clean-install.mjs && npm --prefix tools/decide run build",
+    "build": "npm run build:focus && npm run build:decide && next build",
     "start": "next start",
     "lint": "eslint"
   },

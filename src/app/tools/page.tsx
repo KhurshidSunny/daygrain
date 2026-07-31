@@ -7,14 +7,14 @@ import { buildPageMetadata } from "@/lib/seo"
 export const metadata: Metadata = buildPageMetadata({
   title: "Free Online Productivity Tools Directory",
   description:
-    "Browse all Daygrain tools: online focus timer, study timer, decision maker, and upcoming creativity & learning apps. Filter by category and search by name.",
+    "Browse all Daygrain tools: online focus timer, study timer, free decision matrix, and upcoming creativity & learning apps. Filter by category and search by name.",
   path: "/tools",
   keywords: [
     "productivity tools directory",
     "free online tools list",
     "focus timer online",
     "study tools free",
-    "decision maker tool",
+    "decision matrix online free",
     ...tools.flatMap((t) => t.keywords),
   ],
 })

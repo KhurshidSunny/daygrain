@@ -13,9 +13,9 @@ const nextConfig: NextConfig = {
     root: path.join(__dirname),
   },
   /**
-   * Focus is a Vite SPA built into public/focus.
-   * Next does not auto-serve public/focus/index.html for /focus,
-   * and trailingSlash:false redirects /focus/ → /focus (which 404s).
+   * Tool SPAs (Vite) live under public/<slug>.
+   * Next does not auto-serve public/<slug>/index.html for /<slug>,
+   * and trailingSlash:false redirects /<slug>/ → /<slug> (which 404s).
    */
   async rewrites() {
     return {
@@ -28,14 +28,25 @@ const nextConfig: NextConfig = {
           source: "/focus/",
           destination: "/focus/index.html",
         },
+        {
+          source: "/decide",
+          destination: "/decide/index.html",
+        },
+        {
+          source: "/decide/",
+          destination: "/decide/index.html",
+        },
       ],
       afterFiles: [],
       fallback: [
         {
-          // SPA client routes (/focus/privacy, etc.) — real files like
-          // /focus/assets/* are served from public/ first.
+          // SPA client routes — real files like /focus/assets/* are served first.
           source: "/focus/:path*",
           destination: "/focus/index.html",
+        },
+        {
+          source: "/decide/:path*",
+          destination: "/decide/index.html",
         },
       ],
     }
@@ -44,7 +55,13 @@ const nextConfig: NextConfig = {
     if (dev) {
       config.watchOptions = {
         ...config.watchOptions,
-        ignored: ["**/node_modules/**", "**/tools/**", "**/.git/**", "**/public/focus/**"],
+        ignored: [
+          "**/node_modules/**",
+          "**/tools/**",
+          "**/.git/**",
+          "**/public/focus/**",
+          "**/public/decide/**",
+        ],
       }
     }
     return config

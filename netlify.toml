@@ -1,8 +1,8 @@
 [build]
   command = "npm run build"
 
-# Focus SPA lives in public/focus (built from tools/focus)
-# Static files under /focus/assets/* are served first; these are fallbacks.
+# Tool SPAs live in public/<slug> (built from tools/<slug>).
+# Static files under /<slug>/assets/* are served first; these are fallbacks.
 [[redirects]]
   from = "/focus"
   to = "/focus/index.html"
@@ -16,6 +16,21 @@
 [[redirects]]
   from = "/focus/*"
   to = "/focus/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/decide"
+  to = "/decide/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/decide/"
+  to = "/decide/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/decide/*"
+  to = "/decide/index.html"
   status = 200
 
 [[plugins]]

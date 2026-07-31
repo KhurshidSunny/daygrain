@@ -83,13 +83,14 @@ export default function Home() {
               <strong className="font-medium text-slate-200">Daygrain</strong> is a growing suite of
               free web apps for focus, study, decisions, and everyday productivity. Use our{" "}
               <strong className="font-medium text-slate-200">online focus timer</strong> for deep work
-              and exam prep, or try <strong className="font-medium text-slate-200">Daygrain Decide</strong>{" "}
-              when you need a fast random choice picker—no downloads and no signup.
+              and exam prep, or try{" "}
+              <strong className="font-medium text-slate-200">Daygrain Decide</strong>—a free online
+              decision matrix when you need a clear weighted winner, not a random spin.
             </p>
             <p>
               Whether you search for a <em>study focus tool online</em>, a{" "}
-              <em>pomodoro timer free</em>, or <em>minimal productivity apps</em>, Daygrain is built
-              to load quickly, stay distraction-free, and work on any device.
+              <em>decision matrix online free</em>, or <em>minimal productivity apps</em>, Daygrain is
+              built to load quickly, stay distraction-free, and work on any device.
             </p>
           </div>
           <Link href="/tools" className="btn-primary mt-6 inline-flex px-4 py-2.5">

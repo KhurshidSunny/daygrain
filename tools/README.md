@@ -5,7 +5,7 @@ Each subdirectory is a standalone Vite + React app that deploys under a path on 
 | Folder | Product | URL | Spec (ideas/) |
 |--------|---------|-----|----------------|
 | `focus/` | Daygrain Focus | `/focus/` | `one-task-focus-timer` |
-| `decide/` | Daygrain Decide | `/decide/` | `decision-matrix-lite` (next) |
+| `decide/` | Daygrain Decide | `/decide/` | `decision-matrix-lite` |
 
 ## Rules
 

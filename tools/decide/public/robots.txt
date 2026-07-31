@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /decide/
+
+Sitemap: https://getdaygrain.com/decide/sitemap.xml

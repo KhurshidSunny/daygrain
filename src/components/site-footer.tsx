@@ -23,7 +23,7 @@ export function SiteFooter() {
               <Link href="/tools">All free online tools</Link>
             </li>
             <li>{focusUrl ? <a href={focusUrl}>Online focus timer</a> : null}</li>
-            <li>{decideUrl ? <a href={decideUrl}>Decision maker tool</a> : null}</li>
+            <li>{decideUrl ? <a href={decideUrl}>Online decision matrix</a> : null}</li>
           </ul>
         </div>
 
