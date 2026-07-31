@@ -1,56 +1,65 @@
-# Daygrain
+# Daygrain Hub
 
-One task. One timer. Done.
+Main website for all Daygrain tools: [https://getdaygrain.com](https://getdaygrain.com)
 
-## Overview
+## Structure
 
-Daygrain is a lightweight web app for deep work sessions. It is optimized for speed, clarity, and distraction-free use on desktop and mobile browsers.
+```
+daygrain-hub/                 ← this git repo (hub + tools)
+  src/                        ← Next.js hub site (home, tools directory, legal)
+  public/                     ← hub static assets
+  public/focus/               ← built Focus app (generated, gitignored)
+  tools/
+    focus/                    ← Daygrain Focus (Vite) → deploys at /focus/
+    decide/                   ← (next) Daygrain Decide → /decide/
+```
 
-## Core Features
+## URLs
 
-- Single-task workflow
-- 12 / 25 / 45 minute focus sessions
-- Fullscreen focus mode
-- Pause and resume controls
-- Optional short break flow
-- Privacy and legal pages
-- SEO metadata and structured content support
+| Path | App |
+|------|-----|
+| `/` | Daygrain hub |
+| `/tools` | Tools directory |
+| `/focus/` | Daygrain Focus |
+| `/decide/` | Daygrain Decide (coming soon) |
 
-## Tech Stack
-
-- Vite
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- React Router
-- react-helmet-async
-
-## Scripts
+## Local development
 
 ```bash
+# Install hub deps
+npm install
+
+# Build Focus into public/focus (required once, and after Focus code changes)
+npm run build:focus
+
+# Run the hub (Webpack — more stable on Windows)
 npm run dev
-npm run build
-npm run preview
-npm run lint
 ```
 
-## Project Structure
+Open:
+- Hub: `http://localhost:3000`
+- Focus: `http://localhost:3000/focus/`
 
-- `src/components` - UI and layout components
-- `src/pages` - route-level pages
-- `src/data` - SEO and content metadata
-- `src/brand` - brand tokens and theme values
-- `public` - static assets (favicon, manifest, robots, sitemap)
+If you see a Turbopack panic about `tools/focus/node_modules/daygrain-hub`, stop the server, run `npm run build:focus` again, then `npm run dev`. Do not add `daygrain-hub` as a dependency inside `tools/focus`.
 
-## Build and Deployment
-
-Create a production build with:
+## Production build (Netlify)
 
 ```bash
 npm run build
 ```
 
-Deploy the generated `dist` directory to your hosting platform.
+This builds Focus into `public/focus`, then builds the Next.js hub. Netlify serves:
+
+- Hub routes via Next.js
+- `/focus/*` as the Focus SPA (see `netlify.toml`)
+
+## Adding the next tool
+
+1. Create `tools/<slug>/` (copy `tools/focus` as a template)
+2. Set Vite `base: '/<slug>/'` and `outDir: '../../public/<slug>'`
+3. Add the tool to `src/lib/site-config.ts` with `appPath: '/<slug>/'` and `status: 'Live'`
+4. Add Netlify SPA redirects for `/<slug>/*` in `netlify.toml`
+5. Specs live in `../ideas/<folder>/app_specification.txt`
 
 ## License
 

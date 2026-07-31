@@ -1,19 +1,22 @@
 [build]
-  command = "npm run build -- --webpack"
+  command = "npm run build"
 
-# Proxy Focus app under the main domain path.
-# If your focus site URL differs, update the target host accordingly.
+# Focus SPA lives in public/focus (built from tools/focus)
+# Static files under /focus/assets/* are served first; these are fallbacks.
 [[redirects]]
   from = "/focus"
-  to = "/focus/"
-  status = 301
-  force = true
+  to = "/focus/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/focus/"
+  to = "/focus/index.html"
+  status = 200
 
 [[redirects]]
   from = "/focus/*"
-  to = "https://daygrain-focus.netlify.app/focus/:splat"
+  to = "/focus/index.html"
   status = 200
-  force = true
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

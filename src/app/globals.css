@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #070b14;
+  --text: #ecf1ff;
+  --muted: #94a3b8;
+  --brand-1: #67e8f9;
+  --brand-2: #a78bfa;
+  --border: rgba(154, 168, 202, 0.22);
+  --btn-gradient: linear-gradient(90deg, #67e8f9 0%, #a78bfa 100%);
+  --btn-gradient-soft: linear-gradient(90deg, rgba(103, 232, 249, 0.8) 0%, rgba(167, 139, 250, 0.8) 100%);
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(1200px circle at 15% 0%, rgba(103, 232, 249, 0.12), transparent 55%),
+    radial-gradient(1000px circle at 90% 15%, rgba(167, 139, 250, 0.1), transparent 50%),
+    linear-gradient(180deg, #070b14 0%, #060a12 100%);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(18, 30, 56, 0.72), rgba(13, 21, 39, 0.72));
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtext {
+  color: var(--muted);
+}
+
+/* ——— Buttons (required — components use these class names) ——— */
+a.btn-primary,
+button.btn-primary,
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.75rem;
+  background: var(--btn-gradient) !important;
+  color: #000000 !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(103, 232, 249, 0.28);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+a.btn-primary:hover,
+button.btn-primary:hover,
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(103, 232, 249, 0.38);
+  filter: brightness(1.03);
+}
+
+a.btn-secondary,
+button.btn-secondary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.75rem;
+  background: var(--btn-gradient-soft) !important;
+  color: #000000 !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+a.btn-secondary:hover,
+button.btn-secondary:hover,
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+/* ——— Navbar ——— */
+.nav-link {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link-active {
+  color: #67e8f9 !important;
+  font-weight: 600;
+  background-color: rgba(103, 232, 249, 0.1) !important;
+  box-shadow: inset 0 -2px 0 0 #67e8f9;
+}
+
+.nav-link-active:hover {
+  color: #a5f3fc !important;
+  background-color: rgba(103, 232, 249, 0.14) !important;
+}
+
+/* Tools page category filters — transparent chips, not action buttons */
+.filter-chip {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #94a3b8;
+  background: transparent !important;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.filter-chip:hover {
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.filter-chip-active {
+  color: #67e8f9 !important;
+  border-color: rgba(103, 232, 249, 0.55) !important;
+  background-color: rgba(103, 232, 249, 0.08) !important;
+  font-weight: 600;
+}
+
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Mesh background */
+.mesh-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  opacity: 0.4;
+}
+
+.mesh-blob-a {
+  width: min(55vw, 420px);
+  height: min(55vw, 420px);
+  top: -8%;
+  left: -6%;
+  background: radial-gradient(circle, rgba(103, 232, 249, 0.5), transparent 70%);
+  animation: mesh-a 20s ease-in-out infinite;
+}
+
+.mesh-blob-b {
+  width: min(50vw, 380px);
+  height: min(50vw, 380px);
+  top: 18%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.45), transparent 70%);
+  animation: mesh-b 24s ease-in-out infinite;
+}
+
+.mesh-blob-c {
+  width: min(42vw, 320px);
+  height: min(42vw, 320px);
+  bottom: 8%;
+  left: 28%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.3), transparent 70%);
+  animation: mesh-c 22s ease-in-out infinite;
+}
+
+.mesh-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.28;
+  background-image:
+    linear-gradient(rgba(154, 168, 202, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(154, 168, 202, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes mesh-a {
+  50% {
+    transform: translate(5%, 7%);
+  }
+}
+
+@keyframes mesh-b {
+  50% {
+    transform: translate(-6%, 4%);
+  }
+}
+
+@keyframes mesh-c {
+  50% {
+    transform: translate(3%, -5%);
+  }
+}
+
+.testimonial-fade {
+  animation: fade-up 0.35s ease;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mesh-blob {
+    animation: none;
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .card-hover:hover {
+    transform: none;
+  }
+}

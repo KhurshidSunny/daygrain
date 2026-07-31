@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /focus/
+
+Sitemap: https://getdaygrain.com/focus/sitemap.xml
