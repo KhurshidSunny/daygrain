@@ -6,6 +6,7 @@ Each subdirectory is a standalone Vite + React app that deploys under a path on 
 |--------|---------|-----|----------------|
 | `focus/` | Daygrain Focus | `/focus/` | `one-task-focus-timer` |
 | `decide/` | Daygrain Decide | `/decide/` | `decision-matrix-lite` |
+| `colors/` | Daygrain Colors | `/colors/` | `daily-color-mood-board` |
 
 ## Rules
 

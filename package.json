@@ -8,9 +8,11 @@
     "dev:turbo": "next dev",
     "dev:focus": "npm --prefix tools/focus run dev",
     "dev:decide": "npm --prefix tools/decide run dev",
+    "dev:colors": "npm --prefix tools/colors run dev",
     "build:focus": "node tools/focus/clean-install.mjs && npm --prefix tools/focus run build",
     "build:decide": "node tools/decide/clean-install.mjs && npm --prefix tools/decide run build",
-    "build": "npm run build:focus && npm run build:decide && next build",
+    "build:colors": "node tools/colors/clean-install.mjs && npm --prefix tools/colors run build",
+    "build": "npm run build:focus && npm run build:decide && npm run build:colors && next build",
     "start": "next start",
     "lint": "eslint"
   },

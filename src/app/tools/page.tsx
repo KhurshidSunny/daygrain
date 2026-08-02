@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo"
 export const metadata: Metadata = buildPageMetadata({
   title: "Free Online Productivity Tools Directory",
   description:
-    "Browse all Daygrain tools: online focus timer, study timer, free decision matrix, and upcoming creativity & learning apps. Filter by category and search by name.",
+    "Browse all Daygrain tools: online focus timer, free decision matrix, daily color palette, and upcoming learning apps. Filter by category and search by name.",
   path: "/tools",
   keywords: [
     "productivity tools directory",
@@ -15,6 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
     "focus timer online",
     "study tools free",
     "decision matrix online free",
+    "color palette of the day",
     ...tools.flatMap((t) => t.keywords),
   ],
 })

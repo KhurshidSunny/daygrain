@@ -36,6 +36,14 @@ const nextConfig: NextConfig = {
           source: "/decide/",
           destination: "/decide/index.html",
         },
+        {
+          source: "/colors",
+          destination: "/colors/index.html",
+        },
+        {
+          source: "/colors/",
+          destination: "/colors/index.html",
+        },
       ],
       afterFiles: [],
       fallback: [
@@ -47,6 +55,10 @@ const nextConfig: NextConfig = {
         {
           source: "/decide/:path*",
           destination: "/decide/index.html",
+        },
+        {
+          source: "/colors/:path*",
+          destination: "/colors/index.html",
         },
       ],
     }
@@ -61,6 +73,7 @@ const nextConfig: NextConfig = {
           "**/.git/**",
           "**/public/focus/**",
           "**/public/decide/**",
+          "**/public/colors/**",
         ],
       }
     }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /colors/
+
+Sitemap: https://getdaygrain.com/colors/sitemap.xml

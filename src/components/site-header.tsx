@@ -7,6 +7,7 @@ import { tools, getToolAppUrl } from "@/lib/site-config"
 
 const focusUrl = getToolAppUrl(tools.find((t) => t.slug === "focus")!)
 const decideUrl = getToolAppUrl(tools.find((t) => t.slug === "decide")!)
+const colorsUrl = getToolAppUrl(tools.find((t) => t.slug === "colors")!)
 
 const internalNav = [
   { href: "/", label: "Home", exact: true },
@@ -48,6 +49,11 @@ export function SiteHeader() {
           {decideUrl ? (
             <a href={decideUrl} className="nav-link">
               Decide
+            </a>
+          ) : null}
+          {colorsUrl ? (
+            <a href={colorsUrl} className="nav-link">
+              Colors
             </a>
           ) : null}
         </nav>

@@ -3,6 +3,7 @@ import { siteConfig, tools, getToolAppUrl } from "@/lib/site-config"
 
 const focusUrl = getToolAppUrl(tools.find((t) => t.slug === "focus")!)
 const decideUrl = getToolAppUrl(tools.find((t) => t.slug === "decide")!)
+const colorsUrl = getToolAppUrl(tools.find((t) => t.slug === "colors")!)
 
 export function SiteFooter() {
   return (
@@ -11,8 +12,8 @@ export function SiteFooter() {
         <div className="sm:col-span-2">
           <p className="text-xl font-semibold text-white">{siteConfig.name}</p>
           <p className="mt-2 max-w-md text-sm leading-6 text-slate-400">
-            {siteConfig.tagline}. Free online productivity tools—focus timer, study timer, and
-            decision apps at getdaygrain.com. No signup required.
+            {siteConfig.tagline}. Free online tools—focus timer, decision matrix, and daily color
+            palettes at getdaygrain.com. No signup required.
           </p>
         </div>
 
@@ -24,6 +25,7 @@ export function SiteFooter() {
             </li>
             <li>{focusUrl ? <a href={focusUrl}>Online focus timer</a> : null}</li>
             <li>{decideUrl ? <a href={decideUrl}>Online decision matrix</a> : null}</li>
+            <li>{colorsUrl ? <a href={colorsUrl}>Daily color palette</a> : null}</li>
           </ul>
         </div>
 

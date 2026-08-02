@@ -33,5 +33,20 @@
   to = "/decide/index.html"
   status = 200
 
+[[redirects]]
+  from = "/colors"
+  to = "/colors/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/colors/"
+  to = "/colors/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/colors/*"
+  to = "/colors/index.html"
+  status = 200
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"

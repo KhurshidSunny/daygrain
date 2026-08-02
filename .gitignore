@@ -25,6 +25,7 @@
 # built tool apps (generated into public/ by Vite)
 /public/focus
 /public/decide
+/public/colors
 
 # misc
 .DS_Store

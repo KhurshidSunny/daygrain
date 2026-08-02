@@ -81,15 +81,16 @@ export default function Home() {
           <div className="hero-subtext mt-4 space-y-4 text-sm leading-7 sm:text-base sm:leading-8">
             <p>
               <strong className="font-medium text-slate-200">Daygrain</strong> is a growing suite of
-              free web apps for focus, study, decisions, and everyday productivity. Use our{" "}
-              <strong className="font-medium text-slate-200">online focus timer</strong> for deep work
-              and exam prep, or try{" "}
-              <strong className="font-medium text-slate-200">Daygrain Decide</strong>—a free online
-              decision matrix when you need a clear weighted winner, not a random spin.
+              free web apps for focus, study, decisions, and everyday creativity. Use our{" "}
+              <strong className="font-medium text-slate-200">online focus timer</strong>,{" "}
+              <strong className="font-medium text-slate-200">Daygrain Decide</strong> for a weighted
+              decision matrix, or{" "}
+              <strong className="font-medium text-slate-200">Daygrain Colors</strong> for a daily
+              color palette you can copy into CSS.
             </p>
             <p>
               Whether you search for a <em>study focus tool online</em>, a{" "}
-              <em>decision matrix online free</em>, or <em>minimal productivity apps</em>, Daygrain is
+              <em>color palette of the day</em>, or <em>minimal productivity apps</em>, Daygrain is
               built to load quickly, stay distraction-free, and work on any device.
             </p>
           </div>
