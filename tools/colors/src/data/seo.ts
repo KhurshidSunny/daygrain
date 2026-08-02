@@ -12,6 +12,10 @@ export const SITE_KEYWORDS = [
   'hex color palette today',
   'css color variables copy',
   'tailwind color palette',
+  'tailwind colors hex',
+  'copy hex color code',
+  'css color picker online',
+  'named colors with hex',
   'color mood board online',
   'design color inspiration',
   'harmonious color scheme',
@@ -19,9 +23,9 @@ export const SITE_KEYWORDS = [
 ].join(', ')
 
 export const homeMeta = {
-  title: 'Daygrain Colors — Daily Color Palette of the Day',
+  title: 'Daygrain Colors — Daily Palette & HEX / Tailwind / CSS Library',
   description:
-    'Free daily color palette with three harmonious colors, a mood name, and copy-paste HEX, CSS, and Tailwind snippets—no signup.',
+    'Free daily color palette plus a searchable library of named colors. Copy HEX, Tailwind tokens, or CSS for any shade—no signup.',
   keywords: SITE_KEYWORDS,
 }
 
@@ -71,8 +75,9 @@ export const jsonLdWebApp = {
   featureList: [
     'Daily curated color palette',
     'Three harmonious swatches',
+    'Searchable named color library',
+    'Copy HEX, Tailwind token, or CSS per color',
     'Mood name and description',
-    'Copy HEX, CSS, and Tailwind',
     'Shuffle for more inspiration',
     'No account required',
   ],
@@ -98,7 +103,15 @@ export const jsonLdFaq = {
       name: 'What is Daygrain Colors?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Daygrain Colors is a free daily color palette tool. Each day shows three harmonious colors with a mood name, plus one-click copy for HEX, CSS variables, and Tailwind-style snippets.',
+        text: 'Daygrain Colors is a free daily color palette tool plus a searchable named color library. Each day shows three harmonious colors with a mood name. Browse hundreds of named shades and copy HEX, Tailwind tokens, or CSS.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I copy HEX, Tailwind, and CSS for a single color?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Open the color library, find a color by name or hex, then tap HEX, Tailwind, or CSS on that color card to copy the value you need.',
       },
     },
     {

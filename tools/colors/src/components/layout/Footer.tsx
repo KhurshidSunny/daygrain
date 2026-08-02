@@ -4,7 +4,7 @@ import { BRAND } from '../../brand/theme'
 export function Footer() {
   return (
     <footer className="mt-auto border-t border-sage/10 bg-cream-dark/50">
-      <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
         <p className="text-center text-sm text-charcoal-muted">{BRAND.footerLine}</p>
         <nav
           className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-charcoal-muted"
