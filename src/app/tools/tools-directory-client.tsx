@@ -4,7 +4,7 @@ import { useMemo, useState } from "react"
 import { tools } from "@/lib/site-config"
 import { ToolCard } from "@/components/tool-card"
 
-const categories = ["All", "Productivity", "Decision", "Creativity", "Mind", "Learning"]
+const categories = ["All", "Productivity", "Decision", "Creativity", "Data", "Mind", "Learning"]
 
 export function ToolsDirectoryClient() {
   const [query, setQuery] = useState("")

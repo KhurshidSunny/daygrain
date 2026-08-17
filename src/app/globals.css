@@ -12,7 +12,7 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-jakarta);
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 * {
@@ -30,7 +30,7 @@ body {
     radial-gradient(1200px circle at 15% 0%, rgba(103, 232, 249, 0.12), transparent 55%),
     radial-gradient(1000px circle at 90% 15%, rgba(167, 139, 250, 0.1), transparent 50%),
     linear-gradient(180deg, #070b14 0%, #060a12 100%);
-  font-family: var(--font-jakarta), system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 

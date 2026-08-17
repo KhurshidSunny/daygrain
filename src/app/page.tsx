@@ -67,7 +67,7 @@ export default function Home() {
               View all tools
             </Link>
           </div>
-          <div className="mt-5 grid auto-rows-fr gap-4 sm:mt-6 sm:grid-cols-2">
+          <div className="mt-5 grid auto-rows-fr gap-4 sm:mt-6 sm:grid-cols-2 lg:grid-cols-3">
             {tools.filter((t) => t.status === "Live").map((tool) => (
               <ToolCard key={tool.slug} {...tool} />
             ))}
