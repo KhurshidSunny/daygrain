@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /data/
+
+Sitemap: https://getdaygrain.com/data/sitemap.xml

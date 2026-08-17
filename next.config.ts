@@ -44,6 +44,14 @@ const nextConfig: NextConfig = {
           source: "/colors/",
           destination: "/colors/index.html",
         },
+        {
+          source: "/data",
+          destination: "/data/index.html",
+        },
+        {
+          source: "/data/",
+          destination: "/data/index.html",
+        },
       ],
       afterFiles: [],
       fallback: [
@@ -60,6 +68,10 @@ const nextConfig: NextConfig = {
           source: "/colors/:path*",
           destination: "/colors/index.html",
         },
+        {
+          source: "/data/:path*",
+          destination: "/data/index.html",
+        },
       ],
     }
   },
@@ -74,6 +86,7 @@ const nextConfig: NextConfig = {
           "**/public/focus/**",
           "**/public/decide/**",
           "**/public/colors/**",
+          "**/public/data/**",
         ],
       }
     }

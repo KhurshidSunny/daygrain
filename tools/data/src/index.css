@@ -1,0 +1,145 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-cream: #fafaf8;
+  --color-cream-dark: #f0efe9;
+  --color-charcoal: #1a1a1a;
+  --color-charcoal-muted: #64748b;
+  --color-sage: #6b8f71;
+  --color-sage-light: #8faf94;
+  --color-sage-dark: #2d4a35;
+  --color-sage-deep: #1e3328;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 min-h-svh bg-cream font-sans text-charcoal antialiased;
+  }
+
+  ::selection {
+    @apply bg-sage/25 text-charcoal;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-sage;
+  }
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(107, 143, 113, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(107, 143, 113, 0.06), transparent);
+}
+
+.data-card {
+  @apply rounded-2xl border border-sage/15 bg-white/90 p-5 shadow-xl shadow-sage/8 backdrop-blur-sm sm:p-6;
+}
+
+.btn-primary {
+  @apply rounded-xl bg-sage px-5 py-3.5 text-base font-semibold text-white shadow-lg shadow-sage/25 transition-all duration-200 hover:bg-sage-dark hover:shadow-xl active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-ghost {
+  @apply rounded-xl border border-sage/25 bg-white px-4 py-2.5 text-sm font-semibold text-sage transition-colors hover:bg-sage/5 disabled:cursor-not-allowed disabled:opacity-40;
+}
+
+.app-hero-title {
+  @apply text-3xl font-bold tracking-tight text-charcoal sm:text-4xl sm:leading-tight;
+  letter-spacing: -0.02em;
+}
+
+.app-hero-accent {
+  background: linear-gradient(90deg, #67e8f9, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.app-hero-tagline {
+  @apply mx-auto mt-3 max-w-md text-sm leading-6 text-charcoal-muted sm:text-[0.9375rem];
+}
+
+.site-header {
+  background: linear-gradient(180deg, rgba(18, 22, 32, 0.96) 0%, rgba(12, 15, 24, 0.94) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.site-header .nav-link {
+  @apply rounded-lg px-2.5 py-1.5 font-medium text-slate-400 transition-all duration-200 hover:bg-white/8 hover:text-white sm:px-3;
+}
+
+.field-input {
+  @apply w-full rounded-xl border border-sage/20 bg-white px-3.5 py-2.5 text-sm text-charcoal placeholder:text-charcoal-muted/50 transition-all focus:border-sage focus:ring-2 focus:ring-sage/15;
+}
+
+.prose-daygrain h2 {
+  @apply text-xl font-semibold text-charcoal sm:text-2xl;
+}
+
+.prose-daygrain h3 {
+  @apply mt-8 text-lg font-semibold text-charcoal;
+}
+
+.prose-daygrain p {
+  @apply mt-3 text-sm leading-7 text-charcoal-muted sm:text-base;
+}
+
+.prose-daygrain ol {
+  @apply mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-charcoal-muted sm:text-base;
+}
+
+.prose-legal section + section {
+  @apply mt-8;
+}
+
+.prose-legal h2 {
+  @apply text-lg font-semibold text-charcoal;
+}
+
+.prose-legal p {
+  @apply mt-2 text-sm leading-7 text-charcoal-muted;
+}
+
+.prose-legal a {
+  @apply text-sage underline-offset-2 hover:underline;
+}
+
+.data-table {
+  @apply w-full min-w-max border-collapse text-left text-sm;
+}
+
+.data-table th {
+  @apply sticky top-0 bg-cream px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-charcoal-muted;
+}
+
+.data-table td {
+  @apply max-w-[160px] truncate border-t border-sage/10 px-3 py-2 text-charcoal;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+  }
+}

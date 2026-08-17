@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo"
 export const metadata: Metadata = buildPageMetadata({
   title: "Free Online Productivity Tools Directory",
   description:
-    "Browse all Daygrain tools: online focus timer, free decision matrix, daily color palette, and upcoming learning apps. Filter by category and search by name.",
+    "Browse all Daygrain tools: online focus timer, free decision matrix, daily color palette, CSV profiler, and upcoming learning apps. Filter by category and search by name.",
   path: "/tools",
   keywords: [
     "productivity tools directory",
@@ -16,6 +16,7 @@ export const metadata: Metadata = buildPageMetadata({
     "study tools free",
     "decision matrix online free",
     "color palette of the day",
+    "online csv profiler",
     ...tools.flatMap((t) => t.keywords),
   ],
 })
@@ -29,8 +30,8 @@ export default function ToolsPage() {
           Free online productivity tools
         </h1>
         <p className="hero-subtext mt-3 max-w-2xl text-sm leading-7 sm:text-base">
-          Search and filter Daygrain apps—focus timers, decision helpers, and more. All tools are
-          free to use in your browser with no account required.
+          Search and filter Daygrain apps—focus timers, decision helpers, color tools, and a CSV
+          profiler. All tools are free to use in your browser with no account required.
         </p>
         <ToolsDirectoryClient />
       </section>

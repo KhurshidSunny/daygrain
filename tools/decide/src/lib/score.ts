@@ -54,7 +54,6 @@ export function scoreOptions(
   return scored.sort((a, b) => b.score100 - a.score100 || b.raw - a.raw)
 }
 
-/** How much each criterion helped the winner vs runner-up (highest first). */
 export function getCriterionLeads(
   winnerId: string,
   runnerId: string,

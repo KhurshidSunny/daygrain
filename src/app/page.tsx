@@ -67,8 +67,8 @@ export default function Home() {
               View all tools
             </Link>
           </div>
-          <div className="mt-5 grid auto-rows-fr gap-4 sm:mt-6 sm:grid-cols-2 lg:grid-cols-3">
-            {tools.slice(0, 3).map((tool) => (
+          <div className="mt-5 grid auto-rows-fr gap-4 sm:mt-6 sm:grid-cols-2">
+            {tools.filter((t) => t.status === "Live").map((tool) => (
               <ToolCard key={tool.slug} {...tool} />
             ))}
           </div>
@@ -81,17 +81,18 @@ export default function Home() {
           <div className="hero-subtext mt-4 space-y-4 text-sm leading-7 sm:text-base sm:leading-8">
             <p>
               <strong className="font-medium text-slate-200">Daygrain</strong> is a growing suite of
-              free web apps for focus, study, decisions, and everyday creativity. Use our{" "}
+              free web apps for focus, study, decisions, color, and data. Use our{" "}
               <strong className="font-medium text-slate-200">online focus timer</strong>,{" "}
               <strong className="font-medium text-slate-200">Daygrain Decide</strong> for a weighted
-              decision matrix, or{" "}
-              <strong className="font-medium text-slate-200">Daygrain Colors</strong> for a daily
-              color palette you can copy into CSS.
+              decision matrix,{" "}
+              <strong className="font-medium text-slate-200">Daygrain Colors</strong> for palettes,
+              or <strong className="font-medium text-slate-200">Daygrain Data</strong> to profile a
+              CSV in your browser.
             </p>
             <p>
               Whether you search for a <em>study focus tool online</em>, a{" "}
-              <em>color palette of the day</em>, or <em>minimal productivity apps</em>, Daygrain is
-              built to load quickly, stay distraction-free, and work on any device.
+              <em>online csv profiler</em>, or <em>minimal productivity apps</em>, Daygrain is built
+              to load quickly, stay private, and work on any device.
             </p>
           </div>
           <Link href="/tools" className="btn-primary mt-6 inline-flex px-4 py-2.5">

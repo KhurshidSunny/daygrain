@@ -8,10 +8,10 @@ export const siteConfig = {
   email: "getdaygrain@gmail.com",
   tagline: "Minimal tools for modern minds",
   title: "Daygrain — Free Online Productivity Tools & Focus Apps",
-  heroDescription: "Free focus, study, and decision tools—fast, simple, no signup.",
+  heroDescription: "Free focus, study, decision, color, and data tools—fast, simple, no signup.",
   /** Used for SEO meta descriptions and structured data. */
   description:
-    "Daygrain offers free online productivity tools including a focus timer, study timer, and decision helper. Fast, beautiful, distraction-free web apps—no signup required.",
+    "Daygrain offers free online tools including a focus timer, decision matrix, color library, and CSV profiler. Fast, privacy-first web apps—no signup required.",
   ogImage: "/daygrain-logo1.PNG",
   keywords: [
     "Daygrain",
@@ -29,6 +29,8 @@ export const siteConfig = {
     "compare two job offers tool",
     "color palette of the day",
     "daily color inspiration",
+    "csv data quality checker",
+    "online csv profiler",
     "free web apps no signup",
     "productivity apps for students",
     "deep work timer",
@@ -123,6 +125,26 @@ export const tools: ToolItem[] = [
       "css color picker online",
       "named colors with hex",
       "free color palette generator",
+    ],
+  },
+  {
+    slug: "data",
+    name: "Daygrain Data",
+    tag: "Data",
+    desc: "A free in-browser CSV profiler—infer types, find missing values and duplicates, chart distributions, then clean and export.",
+    status: "Live",
+    appPath: "/data",
+    seoTitle: "Daygrain Data — Free Online CSV Profiler",
+    seoDescription:
+      "Free online CSV profiler and cleaner. Inspect types, missing values, duplicates, and distributions in your browser—no upload, no signup.",
+    keywords: [
+      "online csv profiler",
+      "csv data quality checker",
+      "missing values analyzer",
+      "csv cleaner online free",
+      "data profiling tool browser",
+      "free csv statistics tool",
+      "schema inference csv",
     ],
   },
   {
